@@ -1,0 +1,19 @@
+<div class="shop-list-container fade-in">
+  <h2>Tienda</h2>
+
+  <div class="vegetable-list">
+    <div class="vegetable" *ngFor="let vegetable of vegetables">
+      <a [routerLink]="['./', vegetable.id]">
+        <img [src]="vegetable.image" [alt]="vegetable.name" />
+      </a>
+
+      <div class="info">
+        <a [routerLink]="['./', vegetable.id]">
+          <h3>{{ vegetable.name }}</h3>
+        </a>
+        <p class="price">${{ vegetable.price | number : "1.0-0" }} /kg</p>
+        <button (click)="addToCart(vegetable)">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+</div>

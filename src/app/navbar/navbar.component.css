@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.5rem;
+  border-bottom: 2px solid #4caf50;
+}
+
+.navbar .logo a {
+  color: #4caf50;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.github-btn {
+  color: #58a6ff;
+}
+.github-btn:hover {
+  background-color: rgba(88, 166, 255, 0.1);
+  border-color: #58a6ff;
+}
