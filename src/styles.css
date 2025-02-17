@@ -3,66 +3,70 @@
 
 html,
 body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: 'Roboto', sans-serif;
-    height: 100%;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 h1,
 h2,
 h3,
 .navbar .logo a {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .price {
-    font-family: 'Hind', sans-serif;
+  font-family: 'Hind', sans-serif;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .btn,
 button {
-    color: #4caf50;
-    border: 1px solid #30363d;
-    background-color: transparent;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    text-decoration: none;
-    display: inline-block;
+  width: fit-content;
+  color: #4caf50;
+  border: 1px solid #30363d;
+  background-color: transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn:hover,
 button:hover {
-    background-color: rgba(80, 204, 49, 0.1);
-    border-color: #4caf50;
-    transform: scale(1.05);
-    cursor: pointer;
+  background-color: rgba(80, 204, 49, 0.1);
+  border-color: #4caf50;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 
 
 /* Animación fade-in */
 .fade-in {
-    animation: fadeInAnimation .3s ease-out;
+  animation: fadeInAnimation .3s ease-out;
 }
 
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-        /* Comienza invisible */
-        transform: translateY(-10%);
-        /* Comienza fuera de la pantalla hacia la izquierda */
-    }
+  0% {
+    opacity: 0;
+    /* Comienza invisible */
+    transform: translateY(-10%);
+    /* Comienza fuera de la pantalla hacia la izquierda */
+  }
 
-    100% {
-        opacity: 1;
-        /* Termina completamente visible */
-        transform: translateX(0);
-        /* Llega a su posición original */
-    }
+  100% {
+    opacity: 1;
+    /* Termina completamente visible */
+    transform: translateX(0);
+    /* Llega a su posición original */
+  }
 }

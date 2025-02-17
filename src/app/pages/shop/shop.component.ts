@@ -1,4 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { PageLayoutComponent } from "../../layouts/page-layout/page-layout.component";
 
 interface VegetableType {
   id: number;
@@ -10,7 +13,9 @@ interface VegetableType {
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
-  styleUrls: ['./shop.component.css']
+  styleUrls: ['./shop.component.css'],
+  standalone: true,
+  imports: [RouterModule, CommonModule, PageLayoutComponent]
 })
 export class ShopComponent {
 
