@@ -2,13 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { PageLayoutComponent } from "../../layouts/page-layout/page-layout.component";
-
-interface VegetableType {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-}
+import { CartService } from 'src/app/services/cart.service';
+import { VeggetablesService } from 'src/app/services/veggetables.service';
+import { VegetableType } from 'src/app/types/types';
 
 @Component({
   selector: 'app-shop',
@@ -18,20 +14,9 @@ interface VegetableType {
   imports: [RouterModule, CommonModule, PageLayoutComponent]
 })
 export class ShopComponent {
+  veggetables: Array<VegetableType> = [];
 
-  vegetables: Array<VegetableType> = [
-    { id: 0, name: 'Zanahoria', price: 1500, image: 'assets/veggetables/carrot.jpg' },
-    { id: 1, name: 'Tomate', price: 2000, image: 'assets/veggetables/tomato.jpg' },
-    { id: 2, name: 'Lechuga', price: 1200, image: 'assets/veggetables/lettuce.jpg' },
-    { id: 3, name: 'Brócoli', price: 2500, image: 'assets/veggetables/broccoli.jpg' },
-    { id: 4, name: 'Pepino', price: 1800, image: 'assets/veggetables/cucumber.jpg' }
-  ];
-
-
-
-  cart: Array<VegetableType> = [];
-
-  addToCart(vegetable: VegetableType) {
-    this.cart.push(vegetable);
+  constructor(private veggetablesService: VeggetablesService) {
+    this.veggetables = veggetablesService.vegetables;
   }
 }

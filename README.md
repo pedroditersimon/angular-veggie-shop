@@ -11,9 +11,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Usar componentes standalone
 - [x] Agregar un layout para las paginas
 - [x] Organizar el proyecto en carpetas
-- [ ] Agregar servicio de vegetales
-- [ ] Hacer vista de detalles de un vegetal en /shop/:id
+- [x] Agregar servicio de vegetales
+- [x] Hacer vista de detalles de un vegetal en /shop/:id
 - [ ] Agregar servicio de carrito
+- [ ] Agregar indicadores de cantidad en carrito
+- [ ] Agregar vista de carrito
 
 ## Docs
 

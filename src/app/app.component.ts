@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { PageLayoutComponent } from "./layouts/page-layout/page-layout.component";
 import { RouterModule } from '@angular/router';
 
 // locale
@@ -16,7 +15,7 @@ registerLocaleData(localeEsAr, 'es-AR');
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   standalone: true,
-  imports: [PageLayoutComponent, RouterModule],
+  imports: [RouterModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'es-AR' },  // Usar es-AR como la localización predeterminada
   ],

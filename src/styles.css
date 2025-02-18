@@ -48,6 +48,12 @@ button:hover {
   cursor: pointer;
 }
 
+.btn.disabled, button.disabled {
+  background-color: #30363d;
+  color: #6b6b6b;
+  border-color: #30363d;
+  cursor: not-allowed;
+}
 
 
 /* Animación fade-in */

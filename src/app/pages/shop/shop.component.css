@@ -6,13 +6,13 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.vegetable-list {
+.veggetable-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
 
-.vegetable {
+.veggetable {
   background-color: #1f1f1f;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@ h2 {
 }
 
 
-.vegetable a img {
+.veggetable a img {
   height: 100%;
   width: 100%;
   border-radius: 8px;
@@ -31,20 +31,20 @@ h2 {
   cursor: pointer;
 }
 
-.vegetable .info {
+.veggetable .info {
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.vegetable h3 {
+.veggetable h3 {
   color: #4caf50;
   font-size: 1.5rem;
   margin: 0;
 }
 
-.vegetable p {
+.veggetable p {
   font-size: 1.2rem;
   margin: 0;
 }

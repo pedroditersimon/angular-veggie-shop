@@ -1,18 +1,18 @@
 <app-page-layout>
   <h2>Tienda</h2>
 
-  <div class="vegetable-list">
-    <div class="vegetable" *ngFor="let vegetable of vegetables">
-      <a [routerLink]="['./', vegetable.id]">
-        <img [src]="vegetable.image" [alt]="vegetable.name" />
+  <div class="veggetable-list">
+    <div class="veggetable" *ngFor="let veggetable of veggetables">
+      <a [routerLink]="['./', veggetable.id]">
+        <img [src]="veggetable.image" [alt]="veggetable.name" />
       </a>
 
       <div class="info">
-        <a [routerLink]="['./', vegetable.id]">
-          <h3>{{ vegetable.name }}</h3>
+        <a [routerLink]="['./', veggetable.id]">
+          <h3>{{ veggetable.name }}</h3>
         </a>
-        <p class="price">${{ vegetable.price | number : "1.0-0" }} /kg</p>
-        <button (click)="addToCart(vegetable)">Agregar al carrito</button>
+        <p class="price">${{ veggetable.price | number : "1.0-0" }} /kg</p>
+        <button (click)="(undefined)">Agregar al carrito</button>
       </div>
     </div>
   </div>
