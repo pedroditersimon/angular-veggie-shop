@@ -13,10 +13,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Organizar el proyecto en carpetas
 - [x] Agregar servicio de vegetales
 - [x] Hacer vista de detalles de un vegetal en /shop/:id
+- [x] Agregar aspect-ratio para evitar salto de carga en las imagenes
 - [ ] Agregar servicio de carrito
 - [ ] Agregar indicadores de cantidad en carrito
 - [ ] Agregar vista de carrito
+- [ ] Modo claro y oscuro.
 
 ## Docs
 
-[Rutas y Navegación en Angular 16](./docs/Rutas%20y%20Navegacion%20en%20Angular%2016.md)
+[Rutas y Navegación en Angular 16](./docs/Rutas%20y%20Navegacion%20en%20Angular%2016.md)  
+[Servicios y DI en Angular 16](./docs/Servicios%20y%20DI%20en%20Angular%2016.md)

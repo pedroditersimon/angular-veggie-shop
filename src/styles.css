@@ -65,7 +65,7 @@ button:hover {
   0% {
     opacity: 0;
     /* Comienza invisible */
-    transform: translateY(-10%);
+    transform: translateY(-5%);
     /* Comienza fuera de la pantalla hacia la izquierda */
   }
 

@@ -1,29 +1,51 @@
 <app-page-layout>
   <div class="shop-item">
-    <button (click)="goBack()" class="back-btn">Volver</button>
     <div class="image">
       <img [src]="veggetable?.image" [alt]="veggetable?.name" />
     </div>
+
     <div class="details">
       <div class="title">
         <h1>{{ veggetable?.name }}</h1>
         <p class="price">${{ veggetable?.price | number : "1.0-0" }} /kg</p>
       </div>
 
-      <p class="description">{{ veggetable?.description }}</p>
+      <div class="additional-info">
+        <p>{{ veggetable?.description }}</p>
+        <p>En stock - Cultivo local.</p>
+      </div>
+
+      <div class="additional-info">
+        <h2>Características del proyecto</h2>
+        <p>
+          <app-check-icon />
+          Rutas y navegación.
+        </p>
+
+        <p>
+          <app-check-icon />
+          Servicios.
+        </p>
+
+        <p>
+          <app-check-icon />
+          Inyección de dependencias (DI).
+        </p>
+
+        <p>
+          <app-check-icon />
+          Componentes Standalone.
+        </p>
+      </div>
 
       <div class="additional-info">
         <h2>Información Nutricional</h2>
         <p>Rico en vitaminas A y K, bajo en calorías.</p>
       </div>
 
-      <div class="additional-info">
-        <p class="description">Cultivo local</p>
-        <p class="description">En stock</p>
-      </div>
-
       <div class="actions">
-        <button (click)="(undefined)">Add to cart</button>
+        <button class="back-btn" (click)="goBack()">Volver</button>
+        <button class="add-cart-btn" (click)="(undefined)">Add to cart</button>
       </div>
     </div>
   </div>

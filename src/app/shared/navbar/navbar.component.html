@@ -3,10 +3,12 @@
     <a routerLink="/">🥕Veggie Shop</a>
   </div>
   <ul class="nav-links">
-    <a class="btn" routerLink="/shop" routerLinkActive="link-active">
-      Comprar 🛒
-    </a>
-    <a class="btn" routerLink="/cart" routerLinkActive="link-active">
+    <a
+      *ngIf="showCartBtn"
+      class="btn"
+      routerLink="/cart"
+      routerLinkActive="link-active"
+    >
       Carrito 🛒
     </a>
     <a

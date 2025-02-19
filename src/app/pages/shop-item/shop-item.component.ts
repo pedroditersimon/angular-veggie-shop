@@ -7,6 +7,7 @@ import { PageLayoutComponent } from "../../layouts/page-layout/page-layout.compo
 import { VegetableType } from 'src/app/types/types';
 import { VeggetablesService } from 'src/app/services/veggetables.service';
 import { CommonModule } from '@angular/common';
+import { CheckIconComponent } from "../../shared/icons/check-icon.component";
 
 
 @Component({
@@ -14,7 +15,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './shop-item.component.html',
   styleUrls: ['./shop-item.component.css'],
   standalone: true,
-  imports: [CommonModule, RouterModule, PageLayoutComponent]
+  imports: [CommonModule, RouterModule, PageLayoutComponent, CheckIconComponent]
 })
 export class ShopItemComponent {
   @RouteParam("id") itemId = "";
