@@ -16,7 +16,18 @@ import { VegetableType } from 'src/app/types/types';
 export class ShopComponent {
   veggetables: Array<VegetableType> = [];
 
-  constructor(private veggetablesService: VeggetablesService) {
-    this.veggetables = veggetablesService.vegetables;
+  constructor(
+    private veggetablesService: VeggetablesService,
+    private cartService: CartService
+  ) {
+    this.veggetables = this.veggetablesService.vegetables;
+  }
+
+  getItemCount(id: number) {
+    return this.cartService.getCartItem(id)?.count || 0;
+  }
+
+  addItemToCart(veg: VegetableType) {
+    this.cartService.addToCart(veg);
   }
 }

@@ -8,6 +8,7 @@ import { VegetableType } from 'src/app/types/types';
 import { VeggetablesService } from 'src/app/services/veggetables.service';
 import { CommonModule } from '@angular/common';
 import { CheckIconComponent } from "../../shared/icons/check-icon.component";
+import { CartService } from 'src/app/services/cart.service';
 
 
 @Component({
@@ -23,7 +24,8 @@ export class ShopItemComponent {
 
   constructor(
     private router: Router,
-    private veggetableService: VeggetablesService
+    private veggetableService: VeggetablesService,
+    private cartService: CartService
   ) {
 
   }
@@ -34,5 +36,19 @@ export class ShopItemComponent {
 
   goBack() {
     this.router.navigate(['/shop']);
+  }
+
+  getItemCount() {
+    const vegId = Number(this.itemId);
+    return this.cartService.getCartItem(vegId)?.count || 0;
+  }
+
+  addItemToCart() {
+    const vegId = Number(this.itemId);
+    const veg = this.veggetableService.getById(vegId);
+    // invalid veggetable id
+    if (!veg) return;
+
+    this.cartService.addToCart(veg);
   }
 }

@@ -55,6 +55,19 @@ button:hover {
   cursor: not-allowed;
 }
 
+.badge {
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+
+  border: none;
+  border-radius: 99px;
+}
+.badge.confirm {
+  background: #A7FDCB;
+  color: #155431;
+  stroke: #155431;
+}
 
 /* Animación fade-in */
 .fade-in {

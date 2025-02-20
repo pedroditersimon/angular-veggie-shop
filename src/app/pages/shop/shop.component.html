@@ -12,7 +12,18 @@
           <h3>{{ veggetable.name }}</h3>
         </a>
         <p class="price">${{ veggetable.price | number : "1.0-0" }} /kg</p>
-        <button (click)="(undefined)">Agregar al carrito</button>
+
+        <div class="actions">
+          <span
+            *ngIf="getItemCount(veggetable.id) > 0"
+            class="rounded badge confirm"
+          >
+            {{ getItemCount(veggetable.id) }}
+          </span>
+          <button (click)="addItemToCart(veggetable)">
+            Agregar al carrito
+          </button>
+        </div>
       </div>
     </div>
   </div>

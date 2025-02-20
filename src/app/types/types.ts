@@ -5,3 +5,9 @@ export interface VegetableType {
   image: string;
   description?: string;
 }
+
+
+export interface CartItem {
+  count: number;
+  veggetable: VegetableType;
+}

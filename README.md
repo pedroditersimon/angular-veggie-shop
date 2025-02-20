@@ -14,8 +14,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Agregar servicio de vegetales
 - [x] Hacer vista de detalles de un vegetal en /shop/:id
 - [x] Agregar aspect-ratio para evitar salto de carga en las imagenes
-- [ ] Agregar servicio de carrito
-- [ ] Agregar indicadores de cantidad en carrito
+- [x] Agregar servicio de carrito
+- [x] Agregar indicadores de cantidad en carrito
+- [ ] Mover el indicador de cantidad a una esquina de la imagen del item
 - [ ] Agregar vista de carrito
 - [ ] Modo claro y oscuro.
 

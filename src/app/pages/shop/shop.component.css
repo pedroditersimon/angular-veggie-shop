@@ -50,3 +50,16 @@ h2 {
   margin: 0;
 }
 
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.actions button {
+  flex: 1;
+}
+.actions span {
+  text-align: center;
+}
