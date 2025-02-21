@@ -3,12 +3,7 @@
     <a routerLink="/">🥕Veggie Shop</a>
   </div>
   <ul class="nav-links">
-    <a
-      *ngIf="showCartBtn"
-      class="btn"
-      routerLink="/cart"
-      routerLinkActive="link-active"
-    >
+    <a *ngIf="showCartBtn" class="btn" (click)="toggleCartPanel()">
       <span *ngIf="getCartCount() > 0">({{ getCartCount() }})</span>
       Carrito
       <app-icon-cart />

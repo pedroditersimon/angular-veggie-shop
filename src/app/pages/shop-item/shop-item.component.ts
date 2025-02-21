@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 import { IconCheckComponent } from "../../shared/icons/icon-check.component";
 import { CartService } from 'src/app/services/cart.service';
 import { IconCartComponent } from "../../shared/icons/icon-cart.component";
-import { CartCountIndicatorComponent } from "../../shared/components/cart-count-indicator/cart-count-indicator.component";
+import { CartCountIndicatorComponent } from "../../shared/cart/cart-count-indicator/cart-count-indicator.component";
 
 
 @Component({

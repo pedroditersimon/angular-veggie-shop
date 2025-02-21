@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { CartCountIndicatorComponent } from "../components/cart-count-indicator/cart-count-indicator.component";
+import { CartCountIndicatorComponent } from "../cart/cart-count-indicator/cart-count-indicator.component";
 import { IconCartComponent } from "../icons/icon-cart.component";
 import { CartService } from 'src/app/services/cart.service';
 
@@ -13,7 +13,7 @@ import { CartService } from 'src/app/services/cart.service';
   imports: [RouterModule, CommonModule, IconCartComponent]
 })
 export class NavbarComponent {
-  showCartBtn;
+  showCartBtn: boolean;
 
   constructor(
     private router: Router,
@@ -25,6 +25,10 @@ export class NavbarComponent {
 
   getCartCount() {
     return this.cartService.getCartCount();
+  }
+
+  toggleCartPanel() {
+    this.cartService.showCartPanel = !this.cartService.showCartPanel;
   }
 
 }

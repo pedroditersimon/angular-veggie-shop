@@ -7,6 +7,7 @@ import { CartItem, VegetableType } from '../types/types';
   providedIn: 'root'
 })
 export class CartService {
+  showCartPanel: boolean = false;
   cart: Array<CartItem> = [];
 
   addToCart(veg: VegetableType) {

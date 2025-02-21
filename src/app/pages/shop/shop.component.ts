@@ -6,7 +6,7 @@ import { CartService } from 'src/app/services/cart.service';
 import { VeggetablesService } from 'src/app/services/veggetables.service';
 import { VegetableType } from 'src/app/types/types';
 import { IconCartComponent } from "../../shared/icons/icon-cart.component";
-import { CartCountIndicatorComponent } from "../../shared/components/cart-count-indicator/cart-count-indicator.component";
+import { CartCountIndicatorComponent } from "../../shared/cart/cart-count-indicator/cart-count-indicator.component";
 
 @Component({
   selector: 'app-shop',
