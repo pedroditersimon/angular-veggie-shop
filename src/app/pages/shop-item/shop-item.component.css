@@ -8,6 +8,8 @@
 }
 
 .image {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,8 +44,6 @@
   flex-grow: 1;
   border-color: #4caf50;
 }
-
-
 
 
 .details {

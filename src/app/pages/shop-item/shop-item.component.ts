@@ -7,8 +7,10 @@ import { PageLayoutComponent } from "../../layouts/page-layout/page-layout.compo
 import { VegetableType } from 'src/app/types/types';
 import { VeggetablesService } from 'src/app/services/veggetables.service';
 import { CommonModule } from '@angular/common';
-import { CheckIconComponent } from "../../shared/icons/check-icon.component";
+import { IconCheckComponent } from "../../shared/icons/icon-check.component";
 import { CartService } from 'src/app/services/cart.service';
+import { IconCartComponent } from "../../shared/icons/icon-cart.component";
+import { CartCountIndicatorComponent } from "../../shared/components/cart-count-indicator/cart-count-indicator.component";
 
 
 @Component({
@@ -16,7 +18,7 @@ import { CartService } from 'src/app/services/cart.service';
   templateUrl: './shop-item.component.html',
   styleUrls: ['./shop-item.component.css'],
   standalone: true,
-  imports: [CommonModule, RouterModule, PageLayoutComponent, CheckIconComponent]
+  imports: [CommonModule, RouterModule, PageLayoutComponent, IconCheckComponent, CartCountIndicatorComponent]
 })
 export class ShopItemComponent {
   @RouteParam("id") itemId = "";

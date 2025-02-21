@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-check-icon',
+  selector: 'app-icon-check',
   standalone: true,
   template: `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -18,4 +18,4 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class CheckIconComponent { }
+export class IconCheckComponent { }

@@ -16,7 +16,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Agregar aspect-ratio para evitar salto de carga en las imagenes
 - [x] Agregar servicio de carrito
 - [x] Agregar indicadores de cantidad en carrito
-- [ ] Mover el indicador de cantidad a una esquina de la imagen del item
+- [x] Mover el indicador de cantidad a una esquina de la imagen del item
 - [ ] Agregar vista de carrito
 - [ ] Modo claro y oscuro.
 

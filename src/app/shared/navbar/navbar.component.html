@@ -9,7 +9,9 @@
       routerLink="/cart"
       routerLinkActive="link-active"
     >
-      Carrito 🛒
+      <span *ngIf="getCartCount() > 0">({{ getCartCount() }})</span>
+      Carrito
+      <app-icon-cart />
     </a>
     <a
       href="https://github.com/pedroditersimon"

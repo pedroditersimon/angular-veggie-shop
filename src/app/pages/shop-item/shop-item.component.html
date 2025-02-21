@@ -2,6 +2,7 @@
   <div class="shop-item">
     <div class="image">
       <img [src]="veggetable?.image" [alt]="veggetable?.name" />
+      <app-cart-count-indicator [count]="getItemCount()" />
     </div>
 
     <div class="details">
@@ -18,22 +19,22 @@
       <div class="additional-info">
         <h2>Características del proyecto</h2>
         <p>
-          <app-check-icon />
+          <app-icon-check />
           Rutas y navegación.
         </p>
 
         <p>
-          <app-check-icon />
+          <app-icon-check />
           Servicios.
         </p>
 
         <p>
-          <app-check-icon />
+          <app-icon-check />
           Inyección de dependencias (DI).
         </p>
 
         <p>
-          <app-check-icon />
+          <app-icon-check />
           Componentes Standalone.
         </p>
       </div>
@@ -46,10 +47,7 @@
       <div class="actions">
         <button class="back-btn" (click)="goBack()">Volver</button>
         <button class="add-cart-btn" (click)="addItemToCart()">
-          Agregar al carrito
-          <span *ngIf="getItemCount() > 0" class="rounded badge confirm">
-            {{ getItemCount() }}
-          </span>
+          Agregar al carrito ({{ getItemCount() }})
         </button>
       </div>
     </div>

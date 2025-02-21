@@ -58,6 +58,10 @@ export class CartService {
     return this.cart.find(item => item.veggetable.id === id);
   }
 
+  getCartCount() {
+    return this.cart.reduce((acc, item) => acc + item.count, 0);
+  }
+
   // replace existing item with the given one, with same id
   private setItem(item: CartItem) {
     this.cart = this.cart.map(cartItem => {

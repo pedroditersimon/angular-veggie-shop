@@ -3,6 +3,8 @@
 
   <div class="veggetable-list">
     <div class="veggetable" *ngFor="let veggetable of veggetables">
+      <app-cart-count-indicator [count]="getItemCount(veggetable.id)" />
+
       <a [routerLink]="['./', veggetable.id]">
         <img [src]="veggetable.image" [alt]="veggetable.name" />
       </a>
@@ -13,17 +15,7 @@
         </a>
         <p class="price">${{ veggetable.price | number : "1.0-0" }} /kg</p>
 
-        <div class="actions">
-          <span
-            *ngIf="getItemCount(veggetable.id) > 0"
-            class="rounded badge confirm"
-          >
-            {{ getItemCount(veggetable.id) }}
-          </span>
-          <button (click)="addItemToCart(veggetable)">
-            Agregar al carrito
-          </button>
-        </div>
+        <button (click)="addItemToCart(veggetable)">Agregar al carrito</button>
       </div>
     </div>
   </div>

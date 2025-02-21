@@ -5,13 +5,15 @@ import { PageLayoutComponent } from "../../layouts/page-layout/page-layout.compo
 import { CartService } from 'src/app/services/cart.service';
 import { VeggetablesService } from 'src/app/services/veggetables.service';
 import { VegetableType } from 'src/app/types/types';
+import { IconCartComponent } from "../../shared/icons/icon-cart.component";
+import { CartCountIndicatorComponent } from "../../shared/components/cart-count-indicator/cart-count-indicator.component";
 
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.css'],
   standalone: true,
-  imports: [RouterModule, CommonModule, PageLayoutComponent]
+  imports: [RouterModule, CommonModule, PageLayoutComponent, CartCountIndicatorComponent]
 })
 export class ShopComponent {
   veggetables: Array<VegetableType> = [];

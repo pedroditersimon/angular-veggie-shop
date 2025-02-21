@@ -24,6 +24,18 @@
   gap: 1rem;
 }
 
+.nav-links .btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+:host ::ng-deep .nav-links .btn svg {
+  width: 20px;
+  height: 20px;
+}
+
 .nav-links .link-active {
   display: none;
 }
