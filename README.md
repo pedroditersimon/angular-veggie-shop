@@ -17,7 +17,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Agregar servicio de carrito
 - [x] Agregar indicadores de cantidad en carrito
 - [x] Mover el indicador de cantidad a una esquina de la imagen del item
-- [ ] Agregar vista de carrito
+- [x] Agregar vista de carrito
+- [ ] La vista carrito no se actualiza cuando los datos cambian
 - [ ] Modo claro y oscuro.
 
 ## Docs

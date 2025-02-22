@@ -7,7 +7,7 @@ export interface VegetableType {
 }
 
 
-export interface CartItem {
+export interface CartItemType {
   count: number;
   veggetable: VegetableType;
 }

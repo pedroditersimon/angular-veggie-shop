@@ -1,0 +1,31 @@
+<div class="cart-item">
+  <a class="portrait" [routerLink]="['/shop/', cartItem.veggetable.id]">
+    <img [src]="cartItem.veggetable.image" [alt]="cartItem.veggetable.name" />
+  </a>
+
+  <div class="content">
+    <div class="content-title">
+      <a [routerLink]="['/shop/', cartItem.veggetable.id]">
+        <h3>{{ cartItem.veggetable.name }}</h3>
+      </a>
+
+      <button (click)="removeAllItemsFromCart.emit(cartItem.veggetable.id)">
+        <app-icon-trash />
+      </button>
+    </div>
+
+    <div class="content-body">
+      <div class="actions">
+        <button (click)="removeOneItemFromCart.emit(cartItem.veggetable.id)">
+          <app-icon-minus />
+        </button>
+        <span class="price">{{ cartItem.count }}</span>
+        <button (click)="addItemToCart.emit(cartItem.veggetable)">
+          <app-icon-plus />
+        </button>
+      </div>
+
+      <span class="price">${{ totalCost | number : "1.0-0" }}</span>
+    </div>
+  </div>
+</div>

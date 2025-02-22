@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
   `,
   styles: [
     `
-      :host {
+      svg {
         width: 20px;
         height: 20px;
         color: #4caf50;

@@ -59,9 +59,14 @@ button:hover {
   height: auto;
   padding: 0.25rem 0.5rem;
   font-size: 1rem;
+  font-weight: bold;
 
   border: none;
   border-radius: 99px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .badge.confirm {
   background: #A7FDCB;

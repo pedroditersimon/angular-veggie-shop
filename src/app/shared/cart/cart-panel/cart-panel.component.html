@@ -3,12 +3,19 @@
     <app-icon-up />
   </div>
 
-  <div class="cart-panel-header">
-    <h3 class="title">Cart</h3>
-    <div class="h-divider"></div>
-  </div>
-
   <div class="cart-panel-content">
-    <span>En construcción...</span>
+    <div class="cart-item-list">
+      <app-cart-item
+        *ngFor="let cartItem of cart"
+        [cartItem]="cartItem"
+        (addItemToCart)="addItemToCart(cartItem.veggetable)"
+        (removeOneItemFromCart)="removeOneItemFromCart(cartItem.veggetable.id)"
+        (removeAllItemsFromCart)="
+          removeAllItemsFromCart(cartItem.veggetable.id)
+        "
+      />
+    </div>
+    <div class="h-divider"></div>
+    <button>Finalizar compra</button>
   </div>
 </div>

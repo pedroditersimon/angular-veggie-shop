@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CartItem } from 'src/app/types/types';
+import { CartItemType, VegetableType } from 'src/app/types/types';
 import { CartService } from 'src/app/services/cart.service';
 import { IconUpComponent } from "../../icons/icon-up.component";
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { CartItemComponent } from "../cart-item/cart-item.component";
 
 @Component({
   selector: 'app-cart-panel',
   standalone: true,
-  imports: [CommonModule, IconUpComponent],
+  imports: [CommonModule, RouterModule, IconUpComponent, CartItemComponent],
   templateUrl: './cart-panel.component.html',
   styleUrls: ['./cart-panel.component.css']
 })
 export class CartPanelComponent {
-  cart: Array<CartItem>;
+  cart: Array<CartItemType>;
 
   constructor(
     private cartService: CartService,
@@ -32,4 +33,14 @@ export class CartPanelComponent {
     this.cartService.showCartPanel = false;
   }
 
+
+  addItemToCart(veg: VegetableType) {
+    this.cartService.addToCart(veg);
+  }
+  removeOneItemFromCart(id: number) {
+    this.cartService.removeOneFromCart(id);
+  }
+  removeAllItemsFromCart(id: number) {
+    this.cartService.removeAllFromCart(id);
+  }
 }
