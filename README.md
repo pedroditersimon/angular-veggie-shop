@@ -24,5 +24,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Docs
 
-[Rutas y Navegación en Angular 16](./docs/Rutas%20y%20Navegacion%20en%20Angular%2016.md)  
-[Servicios y DI en Angular 16](./docs/Servicios%20y%20DI%20en%20Angular%2016.md)
+- [Rutas y Navegación en Angular 16](./docs/Rutas%20y%20Navegacion.md)
+
+- [Servicios y DI en Angular 16](./docs/Servicios%20y%20DI.md)
+
+- [Reactividad de componentes](./docs/Reactividad%20de%20componentes.md)
+
+- [Observables](./docs/Observables.md)
