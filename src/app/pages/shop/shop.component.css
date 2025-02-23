@@ -40,6 +40,9 @@ h2 {
   flex-direction: column;
   gap: 0.5rem;
 }
+.info button {
+  width: 100%;
+}
 
 .veggetable h3 {
   color: #4caf50;
@@ -50,18 +53,4 @@ h2 {
 .veggetable p {
   font-size: 1.2rem;
   margin: 0;
-}
-
-.actions {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.actions button {
-  flex: 1;
-}
-.actions span {
-  text-align: center;
 }

@@ -13,18 +13,20 @@ import { CartService } from 'src/app/services/cart.service';
   imports: [RouterModule, CommonModule, IconCartComponent]
 })
 export class NavbarComponent {
-  showCartBtn: boolean;
+  // mostar el carrito solo en la paginas de shop
+  get showCartBtn(): boolean {
+    return this.router.url.startsWith("/shop");
+  }
+
+  get cartCount(): number {
+    return this.cartService.cart.length;
+  }
 
   constructor(
     private router: Router,
     private cartService: CartService,
   ) {
-    // mostar el carrito solo en la paginas de shop
-    this.showCartBtn = this.router.url.startsWith("/shop");
-  }
 
-  getCartCount() {
-    return this.cartService.getCartCount();
   }
 
   toggleCartPanel() {

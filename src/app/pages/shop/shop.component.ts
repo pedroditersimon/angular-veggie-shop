@@ -26,10 +26,10 @@ export class ShopComponent {
   }
 
   getItemCount(id: number) {
-    return this.cartService.getCartItem(id)?.count || 0;
+    return this.cartService.getItem(id)?.count || 0;
   }
 
   addItemToCart(veg: VegetableType) {
-    this.cartService.addToCart(veg);
+    this.cartService.addItem(veg);
   }
 }

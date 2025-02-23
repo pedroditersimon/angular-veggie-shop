@@ -1,8 +1,8 @@
 <app-page-layout>
   <div class="shop-item">
-    <div class="image">
+    <div class="image shadow">
       <img [src]="veggetable?.image" [alt]="veggetable?.name" />
-      <app-cart-count-indicator [count]="getItemCount()" />
+      <app-cart-count-indicator [count]="itemCount" />
     </div>
 
     <div class="details">
@@ -47,7 +47,7 @@
       <div class="actions">
         <button class="back-btn" (click)="goBack()">Volver</button>
         <button class="add-cart-btn" (click)="addItemToCart()">
-          Agregar al carrito ({{ getItemCount() }})
+          Agregar al carrito ({{ itemCount }})
         </button>
       </div>
     </div>

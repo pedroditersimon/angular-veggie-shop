@@ -14,19 +14,23 @@ import { CartItemComponent } from "../cart-item/cart-item.component";
   styleUrls: ['./cart-panel.component.css']
 })
 export class CartPanelComponent {
-  cart: Array<CartItemType>;
+  get cart(): Array<CartItemType> {
+    return this.cartService.cart;
+  }
+
+  get showCartPanel(): boolean {
+    return this.cartService.showCartPanel;
+  }
+
+  get totalPrice(): number {
+    return this.cartService.getTotalPrice();
+  }
 
   constructor(
     private cartService: CartService,
   ) {
-    this.cart = this.cartService.cart;
-
     // cerrar el carrito si se navega a otra página
     this.cartService.showCartPanel = false;
-  }
-
-  getShowCartPanel() {
-    return this.cartService.showCartPanel;
   }
 
   closeCartPanel() {
@@ -35,12 +39,12 @@ export class CartPanelComponent {
 
 
   addItemToCart(veg: VegetableType) {
-    this.cartService.addToCart(veg);
+    this.cartService.addItem(veg);
   }
   removeOneItemFromCart(id: number) {
-    this.cartService.removeOneFromCart(id);
+    this.cartService.removeOneById(id);
   }
   removeAllItemsFromCart(id: number) {
-    this.cartService.removeAllFromCart(id);
+    this.cartService.removeAllById(id);
   }
 }

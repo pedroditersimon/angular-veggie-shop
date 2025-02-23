@@ -1,4 +1,4 @@
-<div *ngIf="getShowCartPanel()" class="cart-panel fade-in">
+<div *ngIf="showCartPanel" class="cart-panel fade-in">
   <div class="btn close-btn" (click)="closeCartPanel()">
     <app-icon-up />
   </div>
@@ -16,6 +16,10 @@
       />
     </div>
     <div class="h-divider"></div>
+    <div class="cart-panel-total">
+      <span class="price">Total</span>
+      <span class="price">${{ totalPrice | number : "1.0-0" }}</span>
+    </div>
     <button>Finalizar compra</button>
   </div>
 </div>

@@ -24,6 +24,7 @@ export class CartItemComponent {
   totalCost: number | undefined;
 
   ngOnInit() {
+    // calculado solo al inicializar
     this.totalCost = this.cartItem.count * this.cartItem.veggetable.price;
   }
 }

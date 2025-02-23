@@ -10,8 +10,8 @@ export class CartService {
   showCartPanel: boolean = false;
   cart: Array<CartItemType> = [];
 
-  addToCart(veg: VegetableType) {
-    const existingItem = this.getCartItem(veg.id);
+  addItem(veg: VegetableType) {
+    const existingItem = this.getItem(veg.id);
 
     // add new if item dosnt exists
     if (!existingItem) {
@@ -31,19 +31,19 @@ export class CartService {
 
   // return true if an item is decremented,
   // return false if item dosnt exists or dosnt have any count
-  removeOneFromCart(id: number): boolean {
-    const existingItem = this.getCartItem(id);
+  removeOneById(id: number): boolean {
+    const existingItem = this.getItem(id);
 
     // return if item dosnt exists
     if (!existingItem) return false;
 
-    // delete and return if item dosnt have any count
-    if (existingItem.count === 0) {
-      this.removeAllFromCart(id);
+    // delete if is the last one
+    if (existingItem.count === 1) {
+      this.removeAllById(id);
       return false;
     }
 
-    // remove count
+    // remove one
     this.setItem({
       ...existingItem,
       count: existingItem.count - 1
@@ -51,16 +51,20 @@ export class CartService {
     return true;
   }
 
-  removeAllFromCart(id: number) {
+  removeAllById(id: number) {
     this.cart = this.cart.filter(item => item.veggetable.id !== id);
   }
 
-  getCartItem(id: number) {
+  getItem(id: number) {
     return this.cart.find(item => item.veggetable.id === id);
   }
 
-  getCartCount() {
+  getAllItemsCount() {
     return this.cart.reduce((acc, item) => acc + item.count, 0);
+  }
+
+  getTotalPrice() {
+    return this.cart.reduce((acc, item) => acc + item.count * item.veggetable.price, 0);
   }
 
   // replace existing item with the given one, with same id

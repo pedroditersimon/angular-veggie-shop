@@ -11,10 +11,10 @@ import { IconCartComponent } from "../../shared/icons/icon-cart.component";
   imports: [RouterModule, PageLayoutComponent, IconCartComponent]
 })
 export class HomeComponent {
-  hint = "";
-
-  constructor(private route: ActivatedRoute) {
-    this.hint = this.route.snapshot.data["hint"];
+  get hint(): string {
+    return this.route.snapshot.data["hint"] || "";
   }
+
+  constructor(private route: ActivatedRoute) { }
 
 }

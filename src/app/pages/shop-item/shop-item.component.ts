@@ -24,6 +24,12 @@ export class ShopItemComponent {
   @RouteParam("id") itemId = "";
   veggetable?: VegetableType;
 
+
+  get itemCount(): number {
+    const vegId = Number(this.itemId);
+    return this.cartService.getItem(vegId)?.count || 0;
+  }
+
   constructor(
     private router: Router,
     private veggetableService: VeggetablesService,
@@ -40,17 +46,12 @@ export class ShopItemComponent {
     this.router.navigate(['/shop']);
   }
 
-  getItemCount() {
-    const vegId = Number(this.itemId);
-    return this.cartService.getCartItem(vegId)?.count || 0;
-  }
-
   addItemToCart() {
     const vegId = Number(this.itemId);
     const veg = this.veggetableService.getById(vegId);
     // invalid veggetable id
     if (!veg) return;
 
-    this.cartService.addToCart(veg);
+    this.cartService.addItem(veg);
   }
 }

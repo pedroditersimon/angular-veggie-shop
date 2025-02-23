@@ -4,7 +4,7 @@
   </div>
   <ul class="nav-links">
     <a *ngIf="showCartBtn" class="btn" (click)="toggleCartPanel()">
-      <span *ngIf="getCartCount() > 0">({{ getCartCount() }})</span>
+      <span *ngIf="cartCount > 0">({{ cartCount }})</span>
       Carrito
       <app-icon-cart />
     </a>
