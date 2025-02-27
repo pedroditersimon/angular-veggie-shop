@@ -1,108 +1,88 @@
 /* light-theme */
 :root {
-  --background-color: #fcfdf7; /* Blanco con toque verdoso */
-  --background-color-secondary: #edf2e4; /* Gris muy suave con matiz verde */
+  --background-color: #fcfdf7;
+  --background-color-secondary: #edf2e4;
+  --text-color: #2e4600;
 
-  --text-color: #2e4600; /* Verde oscuro, legible y natural */
-
-  --primary-color: #7fb800; /* Verde vivo, para acentos y botones */
-  --primary-color-bg: #7fb8001a; /* 10% de opacidad para fondos */
+  --primary-color: #4caf50;
+  --primary-color-bg: #4caf501a; /* 10% opacity */
 
   --disabled-color: #909090;
   --disabled-color-bg: #e0e0e0;
 
-  --confirm-color: #558b2f; /* Verde intenso para confirmaciones */
-  --confirm-color-bg: #558b2f33; /* 20% de opacidad */
+  --confirm-color: #4caf50;
+  --confirm-color-bg: #4caf5033; /* 20% opacity */
 
-  --error-color: #d32f2f; /* Rojo para alertas y errores */
-  --error-color-bg: #d32f2f1a; /* 10% de opacidad */
+  --error-color: #ff5722;
+  --error-color-bg: #ff57221a; /* 10% opacity */
 
-  --badge-confirm-color: #33691e; /* Verde muy oscuro para etiquetas */
-  --badge-confirm-color-bg: #dcedc8; /* Fondo verde pálido para badges */
+  --badge-confirm-color: #155431;
+  --badge-confirm-color-bg: #a7fdcb;
 }
 
 .dark-theme {
   --background-color: #121212;
   --background-color-secondary: #1f1f1f;
-
   --text-color: #e0e0e0;
 
   --primary-color: #4caf50;
-  --primary-color-bg: #4caf501a; /* with 10% opacity */
+  --primary-color-bg: #4caf501a; /* 10% opacity */
 
   --disabled-color: #30363d;
   --disabled-color-bg: #30363d;
 
   --confirm-color: #4caf50;
-  --confirm-color-bg: #4caf50a1; /* with 10% opacity */
+  --confirm-color-bg: #4caf50a1; /* 10% opacity */
 
   --error-color: #ff5722;
-  --error-color-bg: #ff57221a; /* with 10% opacity */
+  --error-color-bg: #ff57221a; /* 10% opacity */
 
   --badge-confirm-color: #155431;
   --badge-confirm-color-bg: #a7fdcb;
 }
 
 .orange-theme {
-  --background-color: #263238; /* Fondo oscuro elegante */
+  --background-color: #263238;
   --background-color-secondary: #37474f;
+  --text-color: #cfd8dc;
 
-  --text-color: #cfd8dc; /* Texto claro para contraste en el modo oscuro */
-
-  --primary-color: #ff8a65; /* Variante de naranja vibrante adaptada al dark */
-  --primary-color-bg: #ff8a651a;
+  --primary-color: #ff8a65;
+  --primary-color-bg: #ff8a651a; /* 10% opacity */
 
   --disabled-color: #757575;
   --disabled-color-bg: #424242;
 
-  --confirm-color: #81c784; /* Verde fresco adaptado al modo oscuro */
-  --confirm-color-bg: #81c78433;
+  --confirm-color: #81c784;
+  --confirm-color-bg: #81c78433; /* 20% opacity */
 
   --error-color: #e57373;
-  --error-color-bg: #e573731a;
+  --error-color-bg: #e573731a; /* 10% opacity */
 
-  --badge-confirm-color: #43a047; /* Verde brillante para destacar etiquetas */
+  --badge-confirm-color: #43a047;
   --badge-confirm-color-bg: #a5d6a7;
 }
 
 .luna-theme {
-  /* Fondos: tonos oscuros que recuerdan al cielo nocturno */
-  --background-color: #2a2a3c; /* Un azul oscuro profundo */
-  --background-color-secondary: #33334d; /* Un tono ligeramente más claro para áreas secundarias */
+  --background-color: #2a2a3c;
+  --background-color-secondary: #33334d;
+  --text-color: #e8e8f0;
 
-  /* Texto: un color suave para lograr buen contraste */
-  --text-color: #e8e8f0; /* Un gris muy claro, casi blanco */
+  --luna-color: #b0b3c0;
+  --primary-color: var(--luna-color);
+  --primary-color-bg: rgba(176, 179, 192, 0.1); /* 10% opacity */
 
-  /* Color Luna: un acento inspirado en la luz de la luna */
-  --luna-color: #b0b3c0; /* Un tono plateado y sutil */
-  --primary-color: var(
-    --luna-color
-  ); /* Usamos el color luna como color primario */
-  --primary-color-bg: rgba(
-    176,
-    179,
-    192,
-    0.1
-  ); /* Versión del color luna con 10% de opacidad */
-
-  /* Elementos deshabilitados: tonos que mantienen la coherencia sin robar protagonismo */
   --disabled-color: #555;
   --disabled-color-bg: #444;
 }
 
 .aurora-theme {
-  /* Fondos: tonos profundos que recuerdan al cielo nocturno */
-  --background-color: #141e30; /* Azul muy oscuro */
-  --background-color-secondary: #243b55; /* Variante ligeramente más clara para áreas secundarias */
-
-  /* Texto: color claro para mantener el contraste y la legibilidad */
+  --background-color: #141e30;
+  --background-color-secondary: #243b55;
   --text-color: #e0e0e0;
 
-  /* Color primario: un acento que evoca la vibrante luz de la aurora */
-  --primary-color: #1cd8d2; /* Turquesa brillante */
-  --primary-color-bg: rgba(28, 216, 210, 0.1); /* Versión con 10% de opacidad */
+  --primary-color: #1cd8d2;
+  --primary-color-bg: rgba(28, 216, 210, 0.1); /* 10% opacity */
 
-  /* Elementos deshabilitados: tonos neutrales que no distraen */
   --disabled-color: #6c757d;
   --disabled-color-bg: #6c757d;
 }
