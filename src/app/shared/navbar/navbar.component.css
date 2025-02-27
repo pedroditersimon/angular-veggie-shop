@@ -40,6 +40,27 @@
   display: none;
 }
 
+/* Estilo base para el select */
+select {
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Estilo para las opciones */
+.theme-selector option {
+  padding: 10px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Estilo para las opciones al pasar el mouse */
+.theme-selector option:hover,
+.theme-selector option:checked {
+  background-color: var(--background-color-secondary);
+}
+
 .github-btn {
   color: #58a6ff;
 }

@@ -19,9 +19,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Mover el indicador de cantidad a una esquina de la imagen del item
 - [x] Agregar vista de carrito
 - [x] La vista carrito no se actualiza cuando los datos cambian
+- [x] Temas claro y oscuro
+- [x] Selector de temas en navbar
 - [ ] Estilizar scrollbar
-- [x] Modo claro y oscuro
-- [ ] Selector de temas en navbar
 
 ## Docs
 

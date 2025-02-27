@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { CartCountIndicatorComponent } from "../cart/cart-count-indicator/cart-count-indicator.component";
+import { Router, RouterModule } from '@angular/router';
 import { IconCartComponent } from "../icons/icon-cart.component";
 import { CartService } from 'src/app/services/Cart.service';
+import { ThemesService } from 'src/app/services/Themes.service';
+import { ThemeTypes } from 'src/app/types/types';
+
 
 @Component({
   selector: 'app-navbar',
@@ -22,15 +24,26 @@ export class NavbarComponent {
     return this.cartService.cart.length;
   }
 
+  get currentTheme(): string {
+    return this.themesService.getCurrentTheme();
+  }
+
   constructor(
     private router: Router,
     private cartService: CartService,
+    private themesService: ThemesService,
   ) {
 
   }
 
   toggleCartPanel() {
     this.cartService.showCartPanel = !this.cartService.showCartPanel;
+  }
+
+  onThemeSelectorChange(event: Event) {
+    const selectElement = event.currentTarget as HTMLSelectElement;
+    const selectedTheme = selectElement.value;
+    this.themesService.setTheme(selectedTheme as ThemeTypes);
   }
 
 }

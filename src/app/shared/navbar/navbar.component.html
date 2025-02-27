@@ -8,6 +8,20 @@
       Carrito
       <app-icon-cart />
     </a>
+
+    <!-- Selector de temas -->
+
+    <select
+      class="btn"
+      [value]="currentTheme"
+      (change)="onThemeSelectorChange($event)"
+    >
+      <option value="dark-theme">Oscuro</option>
+      <option value="light-theme">Claro</option>
+      <option value="luna-theme">Luna</option>
+      <option value="aurora-theme">Aurora</option>
+    </select>
+
     <a
       href="https://github.com/pedroditersimon"
       target="_blank"

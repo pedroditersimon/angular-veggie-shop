@@ -10,6 +10,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+  transition: all 0.3s ease;
 }
 
 svg {
@@ -51,6 +52,7 @@ button:hover {
   border-color: var(--primary-color);
   transform: scale(1.05);
   cursor: pointer;
+  box-shadow: 0 0 8px var(--primary-color-bg);
 }
 
 .btn.disabled,
