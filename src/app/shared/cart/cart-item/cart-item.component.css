@@ -10,7 +10,7 @@
   border-radius: 8px;
 }
 
-.content  {
+.content {
   flex: 1;
 
   display: flex;
@@ -28,19 +28,15 @@
   gap: 0.5rem;
 }
 
-
 .content-title h3 {
   margin: 0;
-  color: #4caf50;
+  color: var(--primary-color);
   font-size: 1.25rem;
 }
 
 .content-body .price {
   align-content: center;
 }
-
-
-
 
 /* Estilizar botones */
 button {
@@ -51,4 +47,3 @@ button {
 
   padding: 0.25rem;
 }
-

@@ -8,14 +8,5 @@ import { Component } from '@angular/core';
       <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
     </svg>
   `,
-  styles: [
-    `
-      svg {
-        width: 20px;
-        height: 20px;
-        color: #4caf50;
-      }
-    `,
-  ],
 })
 export class IconMinusComponent { }

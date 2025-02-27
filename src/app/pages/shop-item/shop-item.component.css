@@ -22,7 +22,6 @@
   aspect-ratio: 1 / 1;
 }
 
-
 .actions {
   display: flex;
   flex-direction: row;
@@ -34,17 +33,16 @@
 
 .back-btn {
   width: fit-content;
-  color: #30363d;
+  color: var(--disabled-color);
 }
 .back-btn:hover {
-  color: #4caf50;
+  color: var(--primary-color);
 }
 
 .add-cart-btn {
   flex-grow: 1;
-  border-color: #4caf50;
+  border-color: var(--primary-color);
 }
-
 
 .details {
   width: 100%;
@@ -54,7 +52,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  border-left: 2px solid #4caf50;
+  border-left: 2px solid var(--primary-color);
   padding-left: 2rem;
   margin-right: 2rem;
 }
@@ -69,12 +67,14 @@
   gap: 1rem;
 }
 
-.details p, h1, h2 {
+.details p,
+h1,
+h2 {
   margin: 0;
 }
 
 .details h1 {
-  color: #4caf50;
+  color: var(--primary-color);
   font-size: 2rem;
 }
 
@@ -92,10 +92,12 @@
   text-wrap: wrap;
 }
 
-
-
 .additional-info {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+:host ::ng-deep svg {
+  color: var(--confirm-color);
 }

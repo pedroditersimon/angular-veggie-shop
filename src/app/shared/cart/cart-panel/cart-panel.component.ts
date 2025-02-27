@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartItemType, VegetableType } from 'src/app/types/types';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/services/Cart.service';
 import { IconUpComponent } from "../../icons/icon-up.component";
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CartItemComponent } from "../cart-item/cart-item.component";

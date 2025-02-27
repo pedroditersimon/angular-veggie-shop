@@ -2,10 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { PageLayoutComponent } from "../../layouts/page-layout/page-layout.component";
-import { CartService } from 'src/app/services/cart.service';
-import { VeggetablesService } from 'src/app/services/veggetables.service';
+import { CartService } from 'src/app/services/Cart.service';
+import { VeggetablesService } from 'src/app/services/Veggetables.service';
 import { VegetableType } from 'src/app/types/types';
-import { IconCartComponent } from "../../shared/icons/icon-cart.component";
 import { CartCountIndicatorComponent } from "../../shared/cart/cart-count-indicator/cart-count-indicator.component";
 
 @Component({

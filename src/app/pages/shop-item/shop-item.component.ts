@@ -5,11 +5,10 @@ import {
 import { Router, RouterModule } from '@angular/router';
 import { PageLayoutComponent } from "../../layouts/page-layout/page-layout.component";
 import { VegetableType } from 'src/app/types/types';
-import { VeggetablesService } from 'src/app/services/veggetables.service';
+import { VeggetablesService } from 'src/app/services/Veggetables.service';
 import { CommonModule } from '@angular/common';
 import { IconCheckComponent } from "../../shared/icons/icon-check.component";
-import { CartService } from 'src/app/services/cart.service';
-import { IconCartComponent } from "../../shared/icons/icon-cart.component";
+import { CartService } from 'src/app/services/Cart.service';
 import { CartCountIndicatorComponent } from "../../shared/cart/cart-count-indicator/cart-count-indicator.component";
 
 

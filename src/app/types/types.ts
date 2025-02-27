@@ -11,3 +11,6 @@ export interface CartItemType {
   count: number;
   veggetable: VegetableType;
 }
+
+
+export type ThemeTypes = "default" | "dark-theme" | "luna-theme" | "aurora-theme";

@@ -8,14 +8,5 @@ import { Component } from '@angular/core';
       <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
     </svg>
   `,
-  styles: [
-    `
-      svg {
-        width: 20px;
-        height: 20px;
-        color: #4caf50;
-      }
-    `,
-  ],
 })
 export class IconCrossComponent { }

@@ -1,0 +1,85 @@
+:root {
+  --background-color: #dcdcdc;
+  --background-color-secondary: #c0c0c0;
+
+  --text-color: #2c2c2c;
+
+  --primary-color: #4caf50;
+  --primary-color-bg: #4caf501a;
+
+  --disabled-color: #8a8a8a;
+  --disabled-color-bg: #8a8a8a;
+
+  --confirm-color: #4caf50;
+  --confirm-color-bg: #4caf50a1; /* with 10% opacity */
+
+  --error-color: #ff5722;
+  --error-color-bg: #ff57221a; /* with 10% opacity */
+
+  --badge-confirm-color: #155431;
+  --badge-confirm-color-bg: #a7fdcb;
+}
+
+.dark-theme {
+  --background-color: #121212;
+  --background-color-secondary: #1f1f1f;
+
+  --text-color: #e0e0e0;
+
+  --primary-color: #4caf50;
+  --primary-color-bg: #4caf501a; /* with 10% opacity */
+
+  --disabled-color: #30363d;
+  --disabled-color-bg: #30363d;
+
+  --confirm-color: #4caf50;
+  --confirm-color-bg: #4caf50a1; /* with 10% opacity */
+
+  --error-color: #ff5722;
+  --error-color-bg: #ff57221a; /* with 10% opacity */
+
+  --badge-confirm-color: #155431;
+  --badge-confirm-color-bg: #a7fdcb;
+}
+
+.luna-theme {
+  /* Fondos: tonos oscuros que recuerdan al cielo nocturno */
+  --background-color: #2a2a3c; /* Un azul oscuro profundo */
+  --background-color-secondary: #33334d; /* Un tono ligeramente más claro para áreas secundarias */
+
+  /* Texto: un color suave para lograr buen contraste */
+  --text-color: #e8e8f0; /* Un gris muy claro, casi blanco */
+
+  /* Color Luna: un acento inspirado en la luz de la luna */
+  --luna-color: #b0b3c0; /* Un tono plateado y sutil */
+  --primary-color: var(
+    --luna-color
+  ); /* Usamos el color luna como color primario */
+  --primary-color-bg: rgba(
+    176,
+    179,
+    192,
+    0.1
+  ); /* Versión del color luna con 10% de opacidad */
+
+  /* Elementos deshabilitados: tonos que mantienen la coherencia sin robar protagonismo */
+  --disabled-color: #555;
+  --disabled-color-bg: #444;
+}
+
+.aurora-theme {
+  /* Fondos: tonos profundos que recuerdan al cielo nocturno */
+  --background-color: #141e30; /* Azul muy oscuro */
+  --background-color-secondary: #243b55; /* Variante ligeramente más clara para áreas secundarias */
+
+  /* Texto: color claro para mantener el contraste y la legibilidad */
+  --text-color: #e0e0e0;
+
+  /* Color primario: un acento que evoca la vibrante luz de la aurora */
+  --primary-color: #1cd8d2; /* Turquesa brillante */
+  --primary-color-bg: rgba(28, 216, 210, 0.1); /* Versión con 10% de opacidad */
+
+  /* Elementos deshabilitados: tonos neutrales que no distraen */
+  --disabled-color: #6c757d;
+  --disabled-color-bg: #6c757d;
+}

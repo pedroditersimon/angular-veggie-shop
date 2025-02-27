@@ -1,5 +1,3 @@
-
-
 .hero {
   flex: 1;
 
@@ -12,7 +10,7 @@
 }
 
 .hero h1 {
-  color: #4caf50;
+  color: var(--primary-color);
   font-size: 2.5rem;
   margin: 0;
 }
@@ -50,18 +48,17 @@
 
 .meat-btn {
   margin-top: 1rem;
-  color: #ff5722;
+  color: var(--error-color);
 }
 .meat-btn:hover {
-  background-color: rgba(255, 87, 34, 0.1);
-  border-color: #ff5722;
+  background-color: var(--error-color-bg);
+  border-color: var(--error-color);
 }
-
 
 .hint {
   margin-left: auto;
-  margin-top: 1.5rem; /* Space above the description */
+  margin-top: 1.5rem;
   font-size: 1rem;
-  color: #c9d1d9; /* Light gray for subtlety */
-  font-style: italic; /* Give it a slight emphasis */
+  color: var(--text-color);
+  font-style: italic;
 }

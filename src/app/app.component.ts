@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { registerLocaleData } from '@angular/common';
 import localeEsAr from '@angular/common/locales/es-AR';
 import { LOCALE_ID } from '@angular/core';
+import { ThemesService } from './services/Themes.service';
 
 // Registrar la localización en español de Argentina
 registerLocaleData(localeEsAr, 'es-AR');
@@ -20,4 +21,9 @@ registerLocaleData(localeEsAr, 'es-AR');
     { provide: LOCALE_ID, useValue: 'es-AR' },  // Usar es-AR como la localización predeterminada
   ],
 })
-export class AppComponent { }
+export class AppComponent {
+
+  constructor(private themeService: ThemesService) {
+    this.themeService.applySavedTheme();
+  }
+}

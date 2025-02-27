@@ -20,7 +20,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Agregar vista de carrito
 - [x] La vista carrito no se actualiza cuando los datos cambian
 - [ ] Estilizar scrollbar
-- [ ] Modo claro y oscuro
+- [x] Modo claro y oscuro
+- [ ] Selector de temas en navbar
 
 ## Docs
 

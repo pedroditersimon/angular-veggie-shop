@@ -1,26 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Hind:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Hind:wght@400&display=swap");
 
 html,
 body {
-  background-color: #121212;
-  color: #e0e0e0;
-  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
+svg {
+  width: 20px;
+  height: 20px;
+}
+
 h1,
 h2,
 h3,
 .navbar .logo a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .price {
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
 }
 
 a {
@@ -30,8 +35,8 @@ a {
 .btn,
 button {
   width: fit-content;
-  color: #4caf50;
-  border: 1px solid #30363d;
+  color: var(--primary-color);
+  border: 1px solid var(--disabled-color);
   background-color: transparent;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -42,16 +47,17 @@ button {
 
 .btn:hover,
 button:hover {
-  background-color: rgba(80, 204, 49, 0.1);
-  border-color: #4caf50;
+  background-color: var(--primary-color-bg);
+  border-color: var(--primary-color);
   transform: scale(1.05);
   cursor: pointer;
 }
 
-.btn.disabled, button.disabled {
-  background-color: #30363d;
-  color: #6b6b6b;
-  border-color: #30363d;
+.btn.disabled,
+button.disabled {
+  background-color: var(--disabled-color-bg);
+  color: var(--disabled-color);
+  border-color: var(--disabled-color);
   cursor: not-allowed;
 }
 
@@ -69,11 +75,9 @@ button:hover {
   align-items: center;
 }
 .badge.confirm {
-  background: #A7FDCB;
-  color: #155431;
-  stroke: #155431;
+  background-color: var(--badge-confirm-color-bg);
+  color: var(--badge-confirm-color);
 }
-
 
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -81,7 +85,7 @@ button:hover {
 
 /* Animación fade-in */
 .fade-in {
-  animation: fadeInAnimation .3s ease-out;
+  animation: fadeInAnimation 0.3s ease-out;
 }
 
 @keyframes fadeInAnimation {

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CartCountIndicatorComponent } from "../cart/cart-count-indicator/cart-count-indicator.component";
 import { IconCartComponent } from "../icons/icon-cart.component";
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/services/Cart.service';
 
 @Component({
   selector: 'app-navbar',
