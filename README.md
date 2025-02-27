@@ -23,6 +23,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Selector de temas en navbar
 - [x] Estilizar scrollbar
 - [x] Generar las opciones del selector de tema en base a `ThemeTypes`
+- [ ] Añadir mobile responsive
 
 ## Docs
 
