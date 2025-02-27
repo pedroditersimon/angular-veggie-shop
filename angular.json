@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles/scrollbar.css",
               "src/styles/themes.css",
               "src/styles/styles.css"
             ],
@@ -88,6 +89,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles/scrollbar.css",
               "src/styles/themes.css",
               "src/styles/styles.css"
             ],

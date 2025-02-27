@@ -21,8 +21,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] La vista carrito no se actualiza cuando los datos cambian
 - [x] Temas claro y oscuro
 - [x] Selector de temas en navbar
-- [ ] Estilizar scrollbar
+- [x] Estilizar scrollbar
 - [x] Generar las opciones del selector de tema en base a `ThemeTypes`
+      modo claro quitar el oliva
 
 ## Docs
 

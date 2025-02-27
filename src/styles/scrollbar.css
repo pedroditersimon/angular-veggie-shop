@@ -1,0 +1,39 @@
+/*
+  ------------------
+  Explicación rápida
+  ------------------
+
+  Chrome, Edge, Safari (WebKit)
+    Se usan ::-webkit-scrollbar y sus derivados.
+  Firefox
+    Se usa scrollbar-width y scrollbar-color.
+
+  Evitamos conflicto con @supports not (selector(::-webkit-scrollbar))
+  aplicamos estilos sólo en navegadores sin WebKit.
+*/
+/* Firefox */
+@supports not (selector(::-webkit-scrollbar)) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--background-color-secondary) transparent;
+  }
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+/* Barra horizontal */
+*::-webkit-scrollbar:horizontal {
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  /* border: 2px solid var(--background-color); */
+}
