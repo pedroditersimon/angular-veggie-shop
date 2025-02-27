@@ -4,7 +4,7 @@ import { Router, RouterModule } from '@angular/router';
 import { IconCartComponent } from "../icons/icon-cart.component";
 import { CartService } from 'src/app/services/Cart.service';
 import { ThemesService } from 'src/app/services/Themes.service';
-import { ThemeTypes } from 'src/app/types/types';
+import { ThemeType } from 'src/app/types/types';
 
 
 @Component({
@@ -28,6 +28,13 @@ export class NavbarComponent {
     return this.themesService.getCurrentTheme();
   }
 
+  get themes(): Array<{ key: string, value: string }> {
+    return Object.keys(ThemeType).map(key => ({
+      key,
+      value: ThemeType[key as keyof typeof ThemeType] as string
+    }));
+  }
+
   constructor(
     private router: Router,
     private cartService: CartService,
@@ -43,7 +50,8 @@ export class NavbarComponent {
   onThemeSelectorChange(event: Event) {
     const selectElement = event.currentTarget as HTMLSelectElement;
     const selectedTheme = selectElement.value;
-    this.themesService.setTheme(selectedTheme as ThemeTypes);
+    this.themesService.setTheme(selectedTheme as ThemeType);
   }
+
 
 }

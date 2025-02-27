@@ -1,5 +1,5 @@
 import { Injectable, } from "@angular/core";
-import { ThemeTypes } from "../types/types";
+import { ThemeType } from "../types/types";
 
 @Injectable({
   providedIn: "root",
@@ -7,19 +7,19 @@ import { ThemeTypes } from "../types/types";
 export class ThemesService {
 
   // Theme defined here, is the default
-  private currentTheme: ThemeTypes = "dark-theme";
+  private currentTheme: ThemeType = ThemeType.Dark;
 
 
-  getCurrentTheme(): ThemeTypes {
+  getCurrentTheme(): ThemeType {
     return this.currentTheme;
   }
 
-  isCurrentTheme(theme: ThemeTypes): boolean {
+  isCurrentTheme(theme: ThemeType): boolean {
     return this.currentTheme === theme;
   }
 
   // aplica un tema y lo guarda en el local storage
-  setTheme(theme: ThemeTypes) {
+  setTheme(theme: ThemeType) {
     // ya estamos en este tema
     if (this.currentTheme === theme)
       return;
@@ -30,12 +30,12 @@ export class ThemesService {
 
   // obtiene el tema guardado y lo aplica
   applySavedTheme() {
-    this.currentTheme = localStorage.getItem("theme") as ThemeTypes || this.currentTheme;
+    this.currentTheme = localStorage.getItem("theme") as ThemeType || this.currentTheme;
     this.applyThemeToDom(this.currentTheme);
   }
 
   // aplica un tema sin guardar en el local storage
-  private applyThemeToDom(theme: ThemeTypes): void {
+  private applyThemeToDom(theme: ThemeType): void {
 
     // borramos el tema actual
     document.body.classList.remove(this.currentTheme);

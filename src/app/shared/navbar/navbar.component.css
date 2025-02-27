@@ -42,15 +42,12 @@
 
 /* Estilo base para el select */
 select {
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  cursor: pointer;
+  background-color: transparent;
   outline: none;
 }
 
 /* Estilo para las opciones */
-.theme-selector option {
-  padding: 10px;
+select option {
   background-color: var(--background-color);
   color: var(--text-color);
 }

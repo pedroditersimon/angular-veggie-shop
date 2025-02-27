@@ -10,16 +10,14 @@
     </a>
 
     <!-- Selector de temas -->
-
-    <select
-      class="btn"
-      [value]="currentTheme"
-      (change)="onThemeSelectorChange($event)"
-    >
-      <option value="dark-theme">Oscuro</option>
-      <option value="light-theme">Claro</option>
-      <option value="luna-theme">Luna</option>
-      <option value="orange-theme">Orange</option>
+    <select class="btn" (change)="onThemeSelectorChange($event)">
+      <option
+        *ngFor="let theme of themes"
+        [value]="theme.value"
+        [selected]="theme.value === currentTheme"
+      >
+        {{ theme.key }}
+      </option>
     </select>
 
     <a

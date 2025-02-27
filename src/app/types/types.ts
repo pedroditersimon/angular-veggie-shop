@@ -13,4 +13,9 @@ export interface CartItemType {
 }
 
 
-export type ThemeTypes = "default" | "dark-theme" | "luna-theme" | "orange-theme";
+export enum ThemeType {
+  Light = "default",
+  Dark = "dark-theme",
+  Luna = "luna-theme",
+  Orange = "orange-theme",
+}
