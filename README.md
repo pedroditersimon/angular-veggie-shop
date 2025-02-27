@@ -22,6 +22,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Temas claro y oscuro
 - [x] Selector de temas en navbar
 - [ ] Estilizar scrollbar
+- [ ] Generar las opciones del selector de tema en base a `ThemesTypes`
 
 ## Docs
 

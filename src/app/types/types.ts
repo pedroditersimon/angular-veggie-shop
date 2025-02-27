@@ -13,4 +13,4 @@ export interface CartItemType {
 }
 
 
-export type ThemeTypes = "default" | "dark-theme" | "luna-theme" | "aurora-theme";
+export type ThemeTypes = "default" | "dark-theme" | "luna-theme" | "orange-theme";
