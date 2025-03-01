@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CartItemType, VegetableType } from 'src/app/types/types';
+import { CartItem, Vegetable } from 'src/app/types/types';
 import { CartService } from 'src/app/services/Cart.service';
 import { IconUpComponent } from "../../icons/icon-up.component";
 import { ActivatedRoute, RouterModule } from '@angular/router';
@@ -14,7 +14,7 @@ import { CartItemComponent } from "../cart-item/cart-item.component";
   styleUrls: ['./cart-panel.component.css']
 })
 export class CartPanelComponent {
-  get cart(): Array<CartItemType> {
+  get cart(): Array<CartItem> {
     return this.cartService.cart;
   }
 
@@ -38,7 +38,7 @@ export class CartPanelComponent {
   }
 
 
-  addItemToCart(veg: VegetableType) {
+  addItemToCart(veg: Vegetable) {
     this.cartService.addItem(veg);
   }
   removeOneItemFromCart(id: number) {

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CartItemType, VegetableType } from '../types/types';
+import { CartItem, Vegetable } from '../types/types';
 
 
 
@@ -8,9 +8,9 @@ import { CartItemType, VegetableType } from '../types/types';
 })
 export class CartService {
   showCartPanel: boolean = false;
-  cart: Array<CartItemType> = [];
+  cart: Array<CartItem> = [];
 
-  addItem(veg: VegetableType) {
+  addItem(veg: Vegetable) {
     const existingItem = this.getItem(veg.id);
 
     // add new if item dosnt exists
@@ -68,7 +68,7 @@ export class CartService {
   }
 
   // replace existing item with the given one, with same id
-  private setItem(item: CartItemType) {
+  private setItem(item: CartItem) {
     this.cart = this.cart.map(cartItem => {
       if (item.veggetable.id === cartItem.veggetable.id)
         return item

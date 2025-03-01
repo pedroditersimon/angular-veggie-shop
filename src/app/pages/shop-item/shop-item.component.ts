@@ -4,7 +4,7 @@ import {
 } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { PageLayoutComponent } from "../../layouts/page-layout/page-layout.component";
-import { VegetableType } from 'src/app/types/types';
+import { Vegetable } from 'src/app/types/types';
 import { VeggetablesService } from 'src/app/services/Veggetables.service';
 import { CommonModule } from '@angular/common';
 import { IconCheckComponent } from "../../shared/icons/icon-check.component";
@@ -21,7 +21,7 @@ import { CartCountIndicatorComponent } from "../../shared/cart/cart-count-indica
 })
 export class ShopItemComponent {
   @RouteParam("id") itemId = "";
-  veggetable?: VegetableType;
+  veggetable?: Vegetable;
 
 
   get itemCount(): number {

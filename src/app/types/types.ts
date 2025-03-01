@@ -1,4 +1,4 @@
-export interface VegetableType {
+export interface Vegetable {
   id: number;
   name: string;
   price: number;
@@ -7,13 +7,13 @@ export interface VegetableType {
 }
 
 
-export interface CartItemType {
+export interface CartItem {
   count: number;
-  veggetable: VegetableType;
+  veggetable: Vegetable;
 }
 
 
-export enum ThemeType {
+export enum Theme {
   Light = "default",
   Dark = "dark-theme",
   Luna = "luna-theme",

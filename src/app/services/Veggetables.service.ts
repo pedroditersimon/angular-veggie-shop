@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { VegetableType } from '../types/types';
+import { Vegetable } from '../types/types';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VeggetablesService {
 
-  vegetables: Array<VegetableType> = [
+  vegetables: Array<Vegetable> = [
     {
       id: 0,
       name: 'Zanahoria',
@@ -44,7 +44,7 @@ export class VeggetablesService {
     }
   ];
 
-  getById(id: number): VegetableType | undefined {
+  getById(id: number): Vegetable | undefined {
     return this.vegetables.find(vegetable => vegetable.id === id);
   }
 }

@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { IconCartComponent } from "../icons/icon-cart.component";
 import { CartService } from 'src/app/services/Cart.service';
-import { ThemesService } from 'src/app/services/Themes.service';
-import { ThemeType } from 'src/app/types/types';
+import { ThemeService } from 'src/app/services/Theme.service';
+import { Theme } from 'src/app/types/types';
 
 
 @Component({
@@ -29,16 +29,16 @@ export class NavbarComponent {
   }
 
   get themes(): Array<{ key: string, value: string }> {
-    return Object.keys(ThemeType).map(key => ({
+    return Object.keys(Theme).map(key => ({
       key,
-      value: ThemeType[key as keyof typeof ThemeType] as string
+      value: Theme[key as keyof typeof Theme] as string
     }));
   }
 
   constructor(
     private router: Router,
     private cartService: CartService,
-    private themesService: ThemesService,
+    private themesService: ThemeService,
   ) {
 
   }
@@ -50,7 +50,7 @@ export class NavbarComponent {
   onThemeSelectorChange(event: Event) {
     const selectElement = event.currentTarget as HTMLSelectElement;
     const selectedTheme = selectElement.value;
-    this.themesService.setTheme(selectedTheme as ThemeType);
+    this.themesService.setTheme(selectedTheme as Theme);
   }
 
 

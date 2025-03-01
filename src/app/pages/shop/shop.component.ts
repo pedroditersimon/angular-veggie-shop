@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { PageLayoutComponent } from "../../layouts/page-layout/page-layout.component";
 import { CartService } from 'src/app/services/Cart.service';
 import { VeggetablesService } from 'src/app/services/Veggetables.service';
-import { VegetableType } from 'src/app/types/types';
+import { Vegetable } from 'src/app/types/types';
 import { CartCountIndicatorComponent } from "../../shared/cart/cart-count-indicator/cart-count-indicator.component";
 
 @Component({
@@ -15,7 +15,7 @@ import { CartCountIndicatorComponent } from "../../shared/cart/cart-count-indica
   imports: [RouterModule, CommonModule, PageLayoutComponent, CartCountIndicatorComponent]
 })
 export class ShopComponent {
-  veggetables: Array<VegetableType> = [];
+  veggetables: Array<Vegetable> = [];
 
   constructor(
     private veggetablesService: VeggetablesService,
@@ -28,7 +28,7 @@ export class ShopComponent {
     return this.cartService.getItem(id)?.count || 0;
   }
 
-  addItemToCart(veg: VegetableType) {
+  addItemToCart(veg: Vegetable) {
     this.cartService.addItem(veg);
   }
 }
