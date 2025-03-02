@@ -1,0 +1,45 @@
+<div class="navbar-options">
+  <!-- Carrito -->
+  <a *ngIf="showCartBtn" class="btn" (click)="toggleCartPanel()">
+    <span *ngIf="cartCount > 0">({{ cartCount }})</span>
+    Carrito
+    <app-icon-cart />
+  </a>
+
+  <!-- Btn: Toggle Hamburger menu -->
+  <button
+    *ngIf="!isDesktop"
+    class="navbar-hamburger-toggle"
+    (click)="toggleHamburgerMenu($event)"
+  >
+    <app-icon-bars />
+  </button>
+
+  <!-- Hamburger menu -->
+  <ul
+    *ngIf="isHamburgerMenuOpened"
+    class="navbar-hamburger"
+    #navbarHamburger
+    [ngClass]="{ vertical: !isDesktop }"
+  >
+    <!-- Selector de temas -->
+    <select class="btn" (change)="onThemeSelectorChange($event)">
+      <option
+        *ngFor="let theme of themes"
+        [value]="theme.value"
+        [selected]="theme.value === currentTheme"
+      >
+        {{ theme.key }}
+      </option>
+    </select>
+
+    <!-- github -->
+    <a
+      class="btn github-btn"
+      href="https://github.com/pedroditersimon"
+      target="_blank"
+    >
+      {{ isDesktop ? "Mira mi GitHub 🐙" : "Ver GitHub" }}
+    </a>
+  </ul>
+</div>

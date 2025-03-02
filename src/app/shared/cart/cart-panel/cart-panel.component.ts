@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartItem, Vegetable } from 'src/app/types/types';
 import { CartService } from 'src/app/services/Cart.service';
@@ -14,6 +14,8 @@ import { CartItemComponent } from "../cart-item/cart-item.component";
   styleUrls: ['./cart-panel.component.css']
 })
 export class CartPanelComponent {
+  @ViewChild("cartPanel") cartPanelRef!: ElementRef;
+
   get cart(): Array<CartItem> {
     return this.cartService.cart;
   }
@@ -31,6 +33,22 @@ export class CartPanelComponent {
   ) {
     // cerrar el carrito si se navega a otra página
     this.cartService.showCartPanel = false;
+  }
+
+  @HostListener("document:mousedown", ["$event"])
+  onGlobalClick(event: MouseEvent): void {
+    // Si el panel no está abierto, no hacer nada
+    if (!this.showCartPanel) return;
+
+    // Si no hay referencia al elemento, no hacer nada
+    if (!this.cartPanelRef) return;
+
+    const insideClick = this.cartPanelRef.nativeElement.contains(event.target);
+
+    // Clic fuera del contenedor
+    if (!insideClick) {
+      this.cartService.showCartPanel = false;
+    }
   }
 
   closeCartPanel() {

@@ -2,30 +2,5 @@
   <div class="logo">
     <a routerLink="/">🥕Veggie Shop</a>
   </div>
-  <ul class="nav-links">
-    <a *ngIf="showCartBtn" class="btn" (click)="toggleCartPanel()">
-      <span *ngIf="cartCount > 0">({{ cartCount }})</span>
-      Carrito
-      <app-icon-cart />
-    </a>
-
-    <!-- Selector de temas -->
-    <select class="btn" (change)="onThemeSelectorChange($event)">
-      <option
-        *ngFor="let theme of themes"
-        [value]="theme.value"
-        [selected]="theme.value === currentTheme"
-      >
-        {{ theme.key }}
-      </option>
-    </select>
-
-    <a
-      href="https://github.com/pedroditersimon"
-      target="_blank"
-      class="btn github-btn"
-    >
-      Mira mi GitHub 🐙
-    </a>
-  </ul>
+  <app-navbar-options />
 </nav>

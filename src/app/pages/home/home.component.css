@@ -47,7 +47,6 @@
 }
 
 .meat-btn {
-  margin-top: 1rem;
   color: var(--error-color);
 }
 .meat-btn:hover {
@@ -61,4 +60,21 @@
   font-size: 1rem;
   color: var(--text-color);
   font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .meat-btn {
+    margin-top: auto;
+  }
+
+  .hint {
+    margin: 0;
+    margin-top: auto;
+    width: 50%;
+  }
 }

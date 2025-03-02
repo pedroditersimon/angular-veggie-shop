@@ -1,0 +1,85 @@
+.navbar-options {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  position: relative;
+}
+
+:host ::ng-deep .navbar-options .btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.navbar-hamburger {
+  display: flex;
+  gap: 0.5rem;
+
+  padding: 0;
+  margin: 0;
+}
+.navbar-hamburger:not(.vertical) {
+  flex-direction: row;
+}
+.navbar-hamburger.vertical {
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 4rem;
+
+  width: max-content;
+
+  background-color: var(--background-color-secondary);
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+}
+
+.navbar-hamburger.vertical .btn {
+  width: auto;
+}
+
+/* Estilo base para el select */
+select {
+  background-color: transparent;
+  outline: none;
+}
+
+/* Estilo para las opciones */
+select option {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Estilo para las opciones al pasar el mouse */
+.theme-selector option:hover,
+.theme-selector option:checked {
+  background-color: var(--background-color-secondary);
+}
+
+.github-btn {
+  color: #58a6ff;
+}
+.github-btn:hover {
+  background-color: rgba(88, 166, 255, 0.1);
+  border-color: #58a6ff;
+}
+
+@media (max-width: 768px) {
+  .navbar-options {
+    gap: 0.25rem;
+  }
+
+  select {
+    width: 20vw;
+  }
+
+  /* app-icon-cart {
+    display: none;
+  } */
+}

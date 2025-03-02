@@ -17,51 +17,13 @@
   font-weight: bold;
 }
 
-.nav-links {
-  margin: 0;
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.25rem;
+    margin: 0 0.5rem;
+  }
 
-.nav-links .btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0.25rem;
-}
-:host ::ng-deep .nav-links .btn svg {
-  width: 20px;
-  height: 20px;
-}
-
-.nav-links .link-active {
-  display: none;
-}
-
-/* Estilo base para el select */
-select {
-  background-color: transparent;
-  outline: none;
-}
-
-/* Estilo para las opciones */
-select option {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-/* Estilo para las opciones al pasar el mouse */
-.theme-selector option:hover,
-.theme-selector option:checked {
-  background-color: var(--background-color-secondary);
-}
-
-.github-btn {
-  color: #58a6ff;
-}
-.github-btn:hover {
-  background-color: rgba(88, 166, 255, 0.1);
-  border-color: #58a6ff;
+  .logo a {
+    font-size: 1rem;
+  }
 }
