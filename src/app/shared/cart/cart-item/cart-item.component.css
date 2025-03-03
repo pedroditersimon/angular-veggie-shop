@@ -46,10 +46,24 @@ button {
   align-items: center;
 
   padding: 0.25rem;
+  border: none;
 }
 
 @media (max-width: 768px) {
   .content-title h3 {
     font-size: 1.5rem;
+  }
+
+  .cart-item {
+    height: 6rem;
+  }
+
+  button {
+    padding: 0.25rem;
+  }
+
+  :host ::ng-deep button svg {
+    height: 35px;
+    width: 35px;
   }
 }
