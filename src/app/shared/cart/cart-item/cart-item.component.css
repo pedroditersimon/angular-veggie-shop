@@ -47,3 +47,9 @@ button {
 
   padding: 0.25rem;
 }
+
+@media (max-width: 768px) {
+  .content-title h3 {
+    font-size: 1.5rem;
+  }
+}

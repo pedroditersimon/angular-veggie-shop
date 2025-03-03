@@ -25,6 +25,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Generar las opciones del selector de tema en base a `ThemeTypes`
 - [x] Las interfaces quitarles sufijos 'type'
 - [x] Añadir mobile responsive
+- [x] Utilizar el dinamic viewport para mobile
 - [ ] Enviar listado de carrito por whatsapp
 
 ## Docs
