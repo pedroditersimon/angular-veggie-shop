@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { CartItem, Vegetable } from 'src/app/types/types';
 import { CartService } from 'src/app/services/Cart.service';
 import { IconUpComponent } from "../../icons/icon-up.component";
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { CartItemComponent } from "../cart-item/cart-item.component";
+import WhatsappChatLinkService from 'src/app/services/WhatsappChatLink.service';
 
 @Component({
   selector: 'app-cart-panel',
@@ -28,8 +29,13 @@ export class CartPanelComponent {
     return this.cartService.getTotalPrice();
   }
 
+  get itemsCount(): number {
+    return this.cartService.cart.length;
+  }
+
   constructor(
     private cartService: CartService,
+    private whatappChatLinkService: WhatsappChatLinkService,
   ) {
     // cerrar el carrito si se navega a otra página
     this.cartService.showCartPanel = false;
@@ -64,5 +70,16 @@ export class CartPanelComponent {
   }
   removeAllItemsFromCart(id: number) {
     this.cartService.removeAllById(id);
+  }
+
+  finishOrder() {
+    if (this.itemsCount <= 0) return; // no items
+
+    // Walmart placeholder (just for practice), TODO: use .env instead
+    const whatsappPhone = "5215551340054"; // phone number
+    if (!whatsappPhone) return; // no phone
+
+    const msg = this.cartService.getCartInTextFormat();
+    this.whatappChatLinkService.openChat(whatsappPhone.toString(), msg);
   }
 }

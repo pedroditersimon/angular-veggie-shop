@@ -26,7 +26,7 @@ export class NavbarOptionsComponent {
     return this.router.url.startsWith("/shop");
   }
 
-  get cartCount(): number {
+  get itemsCount(): number {
     return this.cartService.cart.length;
   }
 

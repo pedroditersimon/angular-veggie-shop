@@ -75,4 +75,9 @@ export class CartService {
       else return cartItem;
     });
   }
+
+  getCartInTextFormat() {
+    return this.cart.map(item => `${item.count}x ${item.veggetable.name}`)
+      .join('\n');
+  }
 }

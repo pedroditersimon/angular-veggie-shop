@@ -20,6 +20,9 @@
       <span class="price">Total</span>
       <span class="price">${{ totalPrice | number : "1.0-0" }}</span>
     </div>
-    <button>Finalizar compra</button>
+
+    <button (click)="finishOrder()" [disabled]="itemsCount <= 0">
+      Finalizar compra
+    </button>
   </div>
 </div>

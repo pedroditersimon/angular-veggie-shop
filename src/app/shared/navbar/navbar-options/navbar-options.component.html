@@ -1,7 +1,7 @@
 <div class="navbar-options">
   <!-- Carrito -->
   <a *ngIf="showCartBtn" class="btn" (click)="toggleCartPanel()">
-    <span *ngIf="cartCount > 0">({{ cartCount }})</span>
+    <span *ngIf="itemsCount > 0">({{ itemsCount }})</span>
     Carrito
     <app-icon-cart />
   </a>
