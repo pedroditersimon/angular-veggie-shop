@@ -28,7 +28,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Utilizar el dinamic viewport para mobile
 - [x] Aumentar tamaños del carrito para mobile
 - [x] Enviar listado de carrito por whatsapp
-- [ ] Configurar .env
+- [x] Configurar .env y variables de entorno
+- [ ] Añadir Toasts para mostrar mensajes al usuario
 
 ## Docs
 

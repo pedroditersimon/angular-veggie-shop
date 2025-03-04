@@ -6,6 +6,7 @@ import { IconUpComponent } from "../../icons/icon-up.component";
 import { RouterModule } from '@angular/router';
 import { CartItemComponent } from "../cart-item/cart-item.component";
 import WhatsappChatLinkService from 'src/app/services/WhatsappChatLink.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-cart-panel',
@@ -75,11 +76,9 @@ export class CartPanelComponent {
   finishOrder() {
     if (this.itemsCount <= 0) return; // no items
 
-    // Walmart placeholder (just for practice), TODO: use .env instead
-    const whatsappPhone = "5215551340054"; // phone number
-    if (!whatsappPhone) return; // no phone
+    if (!environment.WHATSAPP_PHONE) return; // no phone
 
     const msg = this.cartService.getCartInTextFormat();
-    this.whatappChatLinkService.openChat(whatsappPhone.toString(), msg);
+    this.whatappChatLinkService.openChat(environment.WHATSAPP_PHONE, msg);
   }
 }
