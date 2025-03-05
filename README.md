@@ -29,8 +29,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Aumentar tamaños del carrito para mobile
 - [x] Enviar listado de carrito por whatsapp
 - [x] Configurar .env y variables de entorno
-- [ ] Añadir Toasts para mostrar mensajes al usuario
-- [ ] Formatear un buen mensaje de carrito para whatsapp
+- [x] Añadir Toasts para mostrar mensajes al usuario
+- [x] Formatear un buen mensaje de carrito para whatsapp
+- [ ] Aplicar temas al toast
 
 ## Docs
 

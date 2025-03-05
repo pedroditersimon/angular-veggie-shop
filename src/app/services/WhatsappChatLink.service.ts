@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HotToastService } from "@ngneat/hot-toast";
+import { encode } from "node:punycode";
 
 
 @Injectable({
@@ -12,8 +13,10 @@ export default class WhatsappChatLinkService {
   ) { }
 
   getChatLink(phone: string, message: string) {
-    return `https://wa.me/${phone}/?text=${message}`;
+    const _message = encodeURIComponent(message);
+    return `https://wa.me/${phone}/?text=${_message}`;
   }
+
 
   openChat(phone: string, message: string) {
     if (phone.trim().length < 10 || message.trim().length < 2) {
@@ -22,9 +25,7 @@ export default class WhatsappChatLinkService {
     }
 
     this.toast.info('Abriendo chat de WhatsApp...');
-    setTimeout(() => {
-      const link = this.getChatLink(phone, message);
-      window.open(link);
-    }, 2500);
+    const link = this.getChatLink(phone, message);
+    setTimeout(() => window.open(link), 2500); // timeout 2.5s
   }
 }

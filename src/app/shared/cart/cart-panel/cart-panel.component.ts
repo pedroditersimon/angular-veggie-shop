@@ -88,7 +88,7 @@ export class CartPanelComponent {
       return;
     }
 
-    const msg = this.cartService.getCartInTextFormat();
+    const msg = this.cartService.getCartInTextMsgFormat();
     this.whatappChatLinkService.openChat(environment.WHATSAPP_PHONE, msg);
   }
 }

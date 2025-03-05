@@ -76,8 +76,14 @@ export class CartService {
     });
   }
 
-  getCartInTextFormat() {
-    return this.cart.map(item => `${item.count}x ${item.veggetable.name}`)
-      .join('\n');
+  getCartInTextMsgFormat() {
+    const itemList = this.cart.map(item =>
+      `${item.count}x ${item.veggetable.name} - $${item.veggetable.price * item.count}`
+    ).join('\n');
+
+    return `*Carrito de compras:*\n\n${itemList}\n\n*Total a pagar:* $${this.getTotalPrice()}\n\n*¡No envíes este mensaje, es solo un ejemplo!*`;
   }
+
+
+
 }
