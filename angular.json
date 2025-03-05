@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@ngneat/hot-toast/src/styles/styles.css",
               "src/styles/scrollbar.css",
               "src/styles/themes.css",
               "src/styles/styles.css"
@@ -98,6 +99,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@ngneat/hot-toast/src/styles/styles.css",
               "src/styles/scrollbar.css",
               "src/styles/themes.css",
               "src/styles/styles.css"

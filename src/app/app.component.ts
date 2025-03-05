@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { registerLocaleData } from '@angular/common';
 import localeEsAr from '@angular/common/locales/es-AR';
 import { LOCALE_ID } from '@angular/core';
+
 import { ThemeService } from './services/Theme.service';
 
 // Registrar la localización en español de Argentina

@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { CartItemComponent } from "../cart-item/cart-item.component";
 import WhatsappChatLinkService from 'src/app/services/WhatsappChatLink.service';
 import { environment } from 'src/environments/environment';
+import { HotToastService } from '@ngneat/hot-toast';
 
 @Component({
   selector: 'app-cart-panel',
@@ -37,6 +38,7 @@ export class CartPanelComponent {
   constructor(
     private cartService: CartService,
     private whatappChatLinkService: WhatsappChatLinkService,
+    private toast: HotToastService
   ) {
     // cerrar el carrito si se navega a otra página
     this.cartService.showCartPanel = false;
@@ -74,9 +76,17 @@ export class CartPanelComponent {
   }
 
   finishOrder() {
-    if (this.itemsCount <= 0) return; // no items
+    // no items
+    if (this.itemsCount <= 0) {
+      this.toast.error("No hay productos en el carrito");
+      return;
+    }
 
-    if (!environment.WHATSAPP_PHONE) return; // no phone
+    // no phone
+    if (!environment.WHATSAPP_PHONE) {
+      this.toast.error("No se puede abrir el chat de WhatsApp");
+      return;
+    }
 
     const msg = this.cartService.getCartInTextFormat();
     this.whatappChatLinkService.openChat(environment.WHATSAPP_PHONE, msg);

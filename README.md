@@ -30,6 +30,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [x] Enviar listado de carrito por whatsapp
 - [x] Configurar .env y variables de entorno
 - [ ] Añadir Toasts para mostrar mensajes al usuario
+- [ ] Formatear un buen mensaje de carrito para whatsapp
 
 ## Docs
 
