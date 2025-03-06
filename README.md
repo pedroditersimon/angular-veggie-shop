@@ -1,14 +1,53 @@
 # VeggieShop
 
-Proyecto de práctica sobre una tienda de vegetales, construido con Angular v16 🚀
+Proyecto de práctica sobre una tienda de vegetales, construido con Angular v16 🚀.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Esta aplicación permite navegar entre diferentes vistas de productos,
+agregar artículos al carrito, cambiar entre temas, y realizar compras
+enviando los detalles por WhatsApp.
+
+## Instalación
+
+Para correr este proyecto localmente en tu máquina, sigue estos pasos:
+
+1. Necesitas Angular CLI `v16.2.16`. Si no lo tienes instalado, puedes hacerlo con el siguiente comando:
+
+   ```bash
+   npm install -g @angular/cli@16.2.16
+   ```
+
+2. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/pedroditersimon/angular-veggie-shop.git
+   ```
+
+3. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+4. Corre el servidor de desarrollo:
+
+   ```bash
+   ng serve
+   ```
+
+   O con npm:
+
+   ```bash
+   npm start
+   ```
+
+5. Accede a `http://localhost:4200` para ver la aplicación.
 
 ## Features y conceptos
 
 Lista de features y conceptos aplicados en este proyecto:
 
 - Navegación: Rutas, redirecciones, rutas no definidas, parámetros y query params.
+- RouterData: Para el hint de home.
 - Servicios.
 - Inyección de dependencias (DI): @Injectable y providers para inyectar servicios.
 - Componentes Standalone.
@@ -54,7 +93,8 @@ Lista de tareas pendientes y completadas del proyecto.
 - [x] Añadir en este README una lista de las features y conceptos aplicados en el proyecto
 - [ ] Crear pagina con la lista de features y conceptos aplicados en el proyecto
 - [ ] Aplicar temas al toast
-
+- [ ] Agregar un favicon
+- [ ] Al boton de "Mira mi github" ponerle mi foto de perfil
 </details>
 
 ## Docs

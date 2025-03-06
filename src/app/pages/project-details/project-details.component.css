@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 15rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+:host ::ng-deep section ul li svg {
+  color: var(--confirm-color);
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0 1rem;
+  }
+
+  section ul {
+    gap: 0.4rem;
+    margin-left: 0.25rem;
+  }
+
+  .footer {
+    justify-content: center;
+  }
+}

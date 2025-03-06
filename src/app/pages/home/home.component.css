@@ -54,6 +54,14 @@
   border-color: var(--error-color);
 }
 
+.project-btn {
+  color: #58a6ff;
+}
+.project-btn:hover {
+  background-color: rgba(88, 166, 255, 0.1);
+  border-color: #58a6ff;
+}
+
 .hint {
   margin-left: auto;
   margin-top: 1.5rem;

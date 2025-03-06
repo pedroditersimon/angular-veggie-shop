@@ -68,6 +68,14 @@ button.disabled {
   cursor: not-allowed;
 }
 
+.github-btn {
+  color: #58a6ff;
+}
+.github-btn:hover {
+  background-color: rgba(88, 166, 255, 0.1);
+  border-color: #58a6ff;
+}
+
 .badge {
   height: auto;
   padding: 0.25rem 0.5rem;
@@ -88,6 +96,42 @@ button.disabled {
 
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+section {
+  margin: 0;
+}
+
+h1,
+h2 {
+  color: var(--primary-color);
+  font-size: x-large;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  margin-bottom: 0.75rem;
+}
+
+section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+
+  padding: 0;
+  margin: 0;
+  margin-left: 1rem;
+}
+section ul li {
+  list-style-type: none;
+  margin: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* Animación fade-in */

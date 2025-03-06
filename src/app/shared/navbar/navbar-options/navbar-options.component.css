@@ -62,14 +62,6 @@ select option {
   background-color: var(--background-color-secondary);
 }
 
-.github-btn {
-  color: #58a6ff;
-}
-.github-btn:hover {
-  background-color: rgba(88, 166, 255, 0.1);
-  border-color: #58a6ff;
-}
-
 @media (max-width: 768px) {
   .navbar-options {
     gap: 0.25rem;
