@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageLayoutComponent } from "../../layouts/page-layout/page-layout.component";
 import { IconCheckComponent } from "../../shared/icons/icon-check.component";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project-details',
@@ -11,5 +12,9 @@ import { IconCheckComponent } from "../../shared/icons/icon-check.component";
   styleUrls: ['./project-details.component.css']
 })
 export class ProjectDetailsComponent {
+  constructor(private router: Router) { }
 
+  goBack() {
+    this.router.navigate(["/home"]);
+  }
 }

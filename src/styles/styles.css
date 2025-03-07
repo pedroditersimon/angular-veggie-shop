@@ -76,6 +76,14 @@ button.disabled {
   border-color: #58a6ff;
 }
 
+.back-btn {
+  width: fit-content;
+  color: var(--disabled-color);
+}
+.back-btn:hover {
+  color: var(--primary-color);
+}
+
 .badge {
   height: auto;
   padding: 0.25rem 0.5rem;

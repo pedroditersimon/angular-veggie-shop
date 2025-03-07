@@ -33,14 +33,6 @@
   width: 100%;
 }
 
-.back-btn {
-  width: fit-content;
-  color: var(--disabled-color);
-}
-.back-btn:hover {
-  color: var(--primary-color);
-}
-
 .add-cart-btn {
   flex-grow: 1;
   border-color: var(--primary-color);

@@ -91,7 +91,7 @@ Lista de tareas pendientes y completadas del proyecto.
 - [x] Añadir Toasts para mostrar mensajes al usuario
 - [x] Formatear un buen mensaje de carrito para whatsapp
 - [x] Añadir en este README una lista de las features y conceptos aplicados en el proyecto
-- [ ] Crear pagina con la lista de features y conceptos aplicados en el proyecto
+- [x] Crear pagina con la lista de features y conceptos aplicados en el proyecto
 - [ ] Aplicar temas al toast
 - [ ] Agregar un favicon
 - [ ] Al boton de "Mira mi github" ponerle mi foto de perfil
