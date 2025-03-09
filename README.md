@@ -108,3 +108,5 @@ Investigaciones de los temas y conceptos aplicados en este proyecto:
 - [Reactividad de componentes](./docs/Reactividad%20de%20componentes.md)
 
 - [Observables](./docs/Observables.md)
+
+- [Variables de entorno en Angular v16](https://github.com/pedroditersimon/angular-env-config)
